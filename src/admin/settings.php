@@ -4,11 +4,20 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-// Adiciona menu de configurações
-function rde_login_settings_menu() {
-    add_options_page('Configurações de Login', 'Login Personalizado', 'manage_options', 'rde-login-settings', 'rde_login_settings_page');
+// Adiciona "RD Exclusive" na barra lateral com ícone personalizado
+function rde_add_admin_menu() {
+  add_menu_page(
+      'RD Exclusive',                 // Título da página
+      'RD Exclusive',                 // Nome no menu
+      'manage_options',               // Permissão necessária
+      'rde-login-settings',           // Slug do menu
+      'rde_login_settings_page',      // Função que renderiza a página
+      plugin_dir_url(__FILE__).'../../assets/images/favicon-rd-exclusive-marketing-exclusivo.png',
+      2                               // Posição no menu
+  );
 }
-add_action('admin_menu', 'rde_login_settings_menu');
+add_action('admin_menu', 'rde_add_admin_menu');
+
 
 // Página de configurações do login
 function rde_login_settings_page() {
