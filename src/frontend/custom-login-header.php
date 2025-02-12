@@ -52,6 +52,18 @@ function rde_custom_login_styles() {
           border:unset;
           border-color:#000;
         }
+
+        #language-switcher input{
+          border:unset;
+          border-color:#000;
+          color:#000;
+        }
+        #language-switcher input:hover, .wp-core-ui select:focus, .wp-core-ui select:hover, .wp-core-ui select:focus{
+          border:unset;
+          border-color:#000;
+          color:#000;
+          box-shadow:unset;
+        }
         #loginform #rememberme{
           background-color:unset;
           border:2px solid #fff;
@@ -70,6 +82,15 @@ function rde_custom_login_styles() {
           font-size:14px;
           letter-spacing:1px;
         }
+        .privacy-policy-link{
+          color:#fff;
+          text-decoration:none;
+        }
+        .privacy-policy-link:hover{
+          color:#fff;
+        }
+
+        
     </style>
     <?php
 }

@@ -48,13 +48,13 @@ function rde_login_logo_field_callback() {
     $logo = get_option('rde_login_logo');
     ?>
     <input type="text" name="rde_login_logo" id="rde_login_logo" value="<?php echo esc_attr($logo); ?>" style="width: 60%;" />
-    <button class="upload_image_button button">Selecionar Imagem</button>
+    <button type="button" class="upload_image_button button">Selecionar Imagem</button>
     <?php
 }
 
 // Enfileira os scripts do painel administrativo
 function rde_enqueue_admin_scripts($hook) {
-    if ($hook !== 'settings_page_rde-login-settings') {
+    if ($hook !== 'toplevel_page_rde-login-settings') {
         return;
     }
     wp_enqueue_media();
