@@ -14,7 +14,7 @@ function rde_custom_login_styles() {
           font-family:'Montserrat', 'sans-serif'
         }
         body.login {
-            background-image:url('<?php echo plugin_dir_url(__FILE__) . '../../assets/images/background-wprdx-login.jpg'; ?>');
+            background-image:url('<?php echo plugin_dir_url(__FILE__) . 'assets/images/background-wprdx-login.jpg'; ?>');
             background-repeat:no-repeat;
             background-attachment:fixed;
             background-size:cover;

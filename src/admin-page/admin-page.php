@@ -12,7 +12,7 @@ function rde_add_admin_menu() {
       'manage_options',               // Permissão necessária
       'rde-login-settings',           // Slug do menu
       'rde_login_settings_page',      // Função que renderiza a página
-      plugin_dir_url(__FILE__).'../../assets/images/favicon-rd-exclusive-marketing-exclusivo.png',
+      plugin_dir_url(__FILE__).'assets/images/favicon-rd-exclusive-marketing-exclusivo.png',
       2                               // Posição no menu
   );
 }
@@ -58,6 +58,6 @@ function rde_enqueue_admin_scripts($hook) {
         return;
     }
     wp_enqueue_media();
-    wp_enqueue_script('rde-admin-js', plugin_dir_url(__FILE__) . '../../assets/js/admin.js', array('jquery'), null, true);
+    wp_enqueue_script('rde-admin-js', plugin_dir_url(__FILE__) . 'assets/js/admin.js', array('jquery'), null, true);
 }
 add_action('admin_enqueue_scripts', 'rde_enqueue_admin_scripts');

@@ -9,8 +9,7 @@
  */
 
 if (!defined('ABSPATH')) exit;
-if (!function_exists('add_action')) die;
 
-require_once plugin_dir_path(__FILE__) . 'src/admin/settings.php';
-require_once plugin_dir_path(__FILE__) . 'src/frontend/custom-login-header.php';
+require_once plugin_dir_path(__FILE__) . 'src/admin-page/admin-page.php';
+require_once plugin_dir_path(__FILE__) . 'src/modules/custom-login-screen/custom-login-screen.php';
 //require_once plugin_dir_path(__FILE__) . 'src/rewrite/rules.php';
