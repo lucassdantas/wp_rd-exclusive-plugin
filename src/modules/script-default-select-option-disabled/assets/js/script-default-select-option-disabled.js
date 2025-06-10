@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Cria a opção desabilitada
     const defaultOption = document.createElement('option');
     defaultOption.value = '';
-    defaultOption.textContent = ' ';
+    defaultOption.textContent = 'Selecione uma opção';
     defaultOption.disabled = true;
     defaultOption.selected = true;  // Define como opção selecionada padrão
 

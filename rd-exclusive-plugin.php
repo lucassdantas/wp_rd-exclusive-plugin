@@ -11,5 +11,14 @@
 if (!defined('ABSPATH')) exit;
 
 require_once plugin_dir_path(__FILE__) . 'src/admin-page/admin-page.php';
-require_once plugin_dir_path(__FILE__) . 'src/modules/custom-login-screen/custom-login-screen.php';
-//require_once plugin_dir_path(__FILE__) . 'src/rewrite/rules.php';
+
+// Importar automaticamente os arquivos principais dos módulos
+$modules_dir = plugin_dir_path(__FILE__) . 'src/modules/';
+$module_dirs = glob($modules_dir . '*', GLOB_ONLYDIR);
+
+foreach ($module_dirs as $module_path) {
+    $main_file = $module_path . '/' . basename($module_path) . '.php';
+    if (file_exists($main_file)) {
+        include_once $main_file;
+    }
+}
