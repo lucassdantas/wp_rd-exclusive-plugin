@@ -27,13 +27,29 @@ function rde_login_settings_page() {
         <form method="post" action="options.php">
             <?php
             settings_fields('rde_login_settings');
+
+            // Primeiro carrega os módulos que registram os campos
+            $modules_dir = plugin_dir_path(__DIR__) . 'modules/';
+            $module_dirs = glob($modules_dir . '*', GLOB_ONLYDIR);
+
+            foreach ($module_dirs as $module_path) {
+                $settings_page = $module_path . '/settings-page.php';
+                if (file_exists($settings_page)) {
+                    include $settings_page;
+                }
+            }
+
+            // Depois que os campos foram registrados, você os exibe
             do_settings_sections('rde-login-settings');
+
             submit_button();
             ?>
         </form>
+
     </div>
     <?php
 }
-
 require_once plugin_dir_path(__FILE__) . 'module-settings-loader.php';
+
+
 

@@ -7,6 +7,7 @@ if (!defined('ABSPATH')) {
 // Personaliza a página de login
 function rde_custom_login_styles() {
     $logo = get_option('rde_login_logo');
+    if (!$logo) return;
     ?>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
