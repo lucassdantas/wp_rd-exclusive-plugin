@@ -3,7 +3,7 @@ if (!defined('ABSPATH')) exit;
 
 function rde_register_custom_login_screen_settings() {
     $module_slug = 'custom_login_screen'; // slug usado na pasta
-    $option_name = 'rde_enable_' . $module_slug . '_module'; // rde_enable_custom_login_screen_module
+    $option_name = 'rde_enable_' . $module_slug ; // rde_enable_custom_login_screen_module
 
     register_setting('rde_login_settings', $option_name);
     register_setting('rde_login_settings', 'rde_login_logo');
@@ -16,7 +16,7 @@ function rde_register_custom_login_screen_settings() {
     );
 
     add_settings_field(
-        'rde_enable_custom_login_screen_module_field',
+        'rde_enable_custom_login_screen',
         'Ativar módulo',
         function () use ($option_name) {
             $enabled = get_option($option_name);
