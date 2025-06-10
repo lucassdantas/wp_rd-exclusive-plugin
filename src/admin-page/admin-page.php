@@ -23,7 +23,7 @@ add_action('admin_menu', 'rde_add_admin_menu');
 function rde_login_settings_page() {
     ?>
     <div class="wrap">
-        <h1>Configurações de Login</h1>
+        <h1>Funcionalidades Exclusivas</h1>
         <form method="post" action="options.php">
             <?php
             settings_fields('rde_login_settings');
